@@ -50,6 +50,7 @@ class OneEmp(Resource):
         cur.execute('SELECT * FROM emp WHERE id = %s', (e_id,))
         emp_details = cur.fetchall()
         print(bool(emp_details))
+        print(emp_details)
         if not emp_details:
             return make_response({"message": f"emp with id {e_id} does not exist "}, 400)
 
