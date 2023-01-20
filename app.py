@@ -55,7 +55,7 @@ class OneEmp(Resource):
 
         cur.close()
         conn.close()
-        return jsonify({"emp": emp_details})
+        return jsonify({"employee": emp_details})
 
     def put(self, e_id):
         if request.is_json:
